@@ -10,13 +10,14 @@
 </head>
 
 <body>
+
 <tiles:insertAttribute name="body"/>
 
 <br>
 <br>
 <div style="text-align: center;">
 
-   <tiles:insertAttribute name="footer"/>
+    <tiles:insertAttribute name="footer"/>
 
 </div>
 
