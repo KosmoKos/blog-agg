@@ -14,28 +14,7 @@
   
   <dependencies>
   
-  <dependency>
-  	<groupId>org.apache.tiles</groupId>
-  	<artifactId>tiles-core</artifactId>
-  	<version>${apache.tiles</version>
-  </dependency>
-  
-  <dependency>
-  	<groupId>org.apache.tiles</groupId>
-  	<artifactId>tiles-jsp</artifactId>
-  	<version>${apache.tiles</version>
-  </dependency>
-
-  <dependency>
-  	<groupId>org.slf4j</groupId>
-  	<artifactId>slf4j-log4j12</artifactId>
-  	<version>1.7.21</version>
-  </dependency>
-
-
-
-  <!--
-    Core utilities used by other modules.
+  <!--  Core utilities used by other modules.
     Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*)
 -->
 <dependency>
@@ -178,6 +157,26 @@
   <version>${org.springframework.version}</version>
   <scope>test</scope>
 </dependency>
+
+ <dependency>
+  	<groupId>org.apache.tiles</groupId>
+  	<artifactId>tiles-core</artifactId>
+  	<version>${apache.tiles</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>org.apache.tiles</groupId>
+  	<artifactId>tiles-jsp</artifactId>
+  	<version>${apache.tiles</version>
+  </dependency>
+
+  <dependency>
+  	<groupId>org.slf4j</groupId>
+  	<artifactId>slf4j-log4j12</artifactId>
+  	<version>1.7.21</version>
+  </dependency>
+
+
   </dependencies>
   
   
