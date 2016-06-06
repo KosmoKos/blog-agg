@@ -176,13 +176,27 @@
   	<version>1.7.21</version>
   </dependency>
 
+      <dependency>
+          <groupId>jstl</groupId>
+          <artifactId>jstl</artifactId>
+          <version>1.2</version>
+      </dependency>
+
 
   </dependencies>
   
   
   <build>
   	<plugins>
-  		<plugin>
+
+        <plugin>
+            <groupId>org.apache.tomcat.maven</groupId>
+            <artifactId>tomcat-maven-plugin</artifactId>
+            <version>2.2</version>
+        </plugin>
+
+
+        <plugin>
   			<groupId>org.eclipse.jetty</groupId>
   			<artifactId>jetty-maven-plugin</artifactId>
   			<version>9.3.9.v20160517</version>

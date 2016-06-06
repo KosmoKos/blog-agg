@@ -3,10 +3,8 @@
 
 <html>
 <head>
-    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
-    
+    <meta http-equiv="content-type" content="text/html"; charset="UTF-8">
     <title><tiles:getAsString name="title"/></title>
-    
 </head>
 
 <body>
@@ -16,7 +14,7 @@
 <br>
 <div style="text-align: center;">
 
-   <tiles:insertAttribute name="footer"/>
+    <tiles:insertAttribute name="footer"/>
 
 </div>
 
