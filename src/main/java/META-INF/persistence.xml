@@ -5,5 +5,6 @@
 		<class>KosmoKos.jba.entity.Role</class>
 		<class>KosmoKos.jba.entity.Item</class>
 		<class>KosmoKos.jba.entity.Blog</class>		
+		<class>KosmoKos.jba.entity.Blog</class>		
 	</persistence-unit>
 </persistence>
