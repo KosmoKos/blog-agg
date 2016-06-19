@@ -13,7 +13,7 @@
 	<entity>
 		<entity-name>KosmoKos.jba.entity.Item</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>168</entity-height>
+		<entity-height>188</entity-height>
 		<entity-X-Coordinate>570</entity-X-Coordinate>
 		<entity-Y-Coordinate>240</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
@@ -24,7 +24,7 @@
 	<entity>
 		<entity-name>KosmoKos.jba.entity.Blog</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>166</entity-height>
+		<entity-height>186</entity-height>
 		<entity-X-Coordinate>570</entity-X-Coordinate>
 		<entity-Y-Coordinate>24</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>

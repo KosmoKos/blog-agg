@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import antlr.collections.List;
 
 @Entity
 public class Blog {
@@ -13,13 +16,20 @@ public class Blog {
 	@GeneratedValue
 	private Integer id;	
 	
+	private String name;
+	
 	private String url;
 	
-	private String name;
+	
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
 	private User user;
+	
+	@OneToMany(mappedBy="blog")
+	private List<Item> items;
+		
+	
 	
 	public User getUser() {
 		return user;
@@ -33,18 +43,21 @@ public class Blog {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}	
+	
 	public String getUrl() {
 		return url;
 	}
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	
 	
 }

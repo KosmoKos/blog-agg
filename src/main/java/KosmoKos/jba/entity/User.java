@@ -23,9 +23,16 @@ public class User {
 	
 	private String password;
 	
+	
+	
+	@OneToMany(mappedBy="user")
+	private List<Blog> blogs;
+	
+	
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
+		
 	
 	public List<Blog> getBlogs() {
 		return blogs;
@@ -34,9 +41,6 @@ public class User {
 	public void setBlogs(List<Blog> blogs) {
 		this.blogs = blogs;
 	}
-
-	@OneToMany(mappedBy="user")
-	private List<Blog> blogs;
 	
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
