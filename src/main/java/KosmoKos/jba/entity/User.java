@@ -11,29 +11,24 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class User {
-	 	
 
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
+
 	private String name;
-	
+
 	private String email;
-	
+
 	private String password;
-	
-	
-	
-	@OneToMany(mappedBy="user")
+
+	@OneToMany(mappedBy = "user")
 	private List<Blog> blogs;
-	
-	
+
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
-		
-	
+
 	public List<Blog> getBlogs() {
 		return blogs;
 	}
@@ -41,15 +36,15 @@ public class User {
 	public void setBlogs(List<Blog> blogs) {
 		this.blogs = blogs;
 	}
-	
+
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
-	
+
 	public List<Role> getRoles() {
 		return roles;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -74,7 +69,6 @@ public class User {
 		this.password = password;
 	}
 
-	
 	public Integer getId() {
 		return id;
 	}
@@ -82,5 +76,5 @@ public class User {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
+
 }
