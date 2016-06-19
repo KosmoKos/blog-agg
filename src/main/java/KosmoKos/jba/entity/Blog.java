@@ -7,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import antlr.collections.List;
+import java.util.List;
 
 @Entity
 public class Blog {
