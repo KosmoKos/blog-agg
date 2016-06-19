@@ -16,8 +16,11 @@ public class User {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	private String name;	
+	
+	private String name;
+	
 	private String email;
+	
 	private String password;
 	
 	@ManyToMany

@@ -13,9 +13,28 @@ public class Item {
 	
 	@Id
 	@GeneratedValue
+	private Integer id;
+	
 	private String title;
 	
 	private String description;
+	
+		
+	@Column(name= "published_date")
+	private Date publishedDate;
+	
+	private String link; 
+	
+	
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	
 	public String getTitle() {
 		return title;
@@ -29,18 +48,19 @@ public class Item {
 		return description;
 	}
 
+	public Date getPublishedDate() {
+		return publishedDate;
+	}
+
+	public void setPublishedDate(Date publishedDate) {
+		this.publishedDate = publishedDate;
+	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	public Date getPublished() {
-		return published;
-	}
-
-	public void setPublished(Date published) {
-		this.published = published;
-	}
-
+	
 	public String getLink() {
 		return link;
 	}
@@ -49,9 +69,8 @@ public class Item {
 		this.link = link;
 	}
 
-	@Column(name= "published_date")
-	private Date published;
 	
-	private String link; 
+	
+	
 	
 }
