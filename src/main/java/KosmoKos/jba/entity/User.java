@@ -7,17 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User {
-	 
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
-	}
+	 	
 
 	@Id
 	@GeneratedValue
@@ -29,6 +23,25 @@ public class User {
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
+	
+	public List<Blog> getBlogs() {
+		return blogs;
+	}
+
+	public void setBlogs(List<Blog> blogs) {
+		this.blogs = blogs;
+	}
+
+	@OneToMany(mappedBy="user")
+	private List<Blog> blogs;
+	
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
+	
+	public List<Role> getRoles() {
+		return roles;
+	}
 	
 	public String getName() {
 		return name;
