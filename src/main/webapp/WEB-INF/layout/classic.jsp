@@ -33,7 +33,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href='<spring:url value="/"/>'>Home</a></li>
-                    <li><a href="#about">Link</a></li>
+                    <li><a href='<spring:url value="/users.html"/>'> Users</a></li>
                     <li><a href="#contact">Link</a></li>
 
                 </ul>
@@ -48,9 +48,9 @@
   <br>
   <br>
 
-  <center>
+  <div style="text-align: center;">
     <tiles:insertAttribute name="footer"/>
-  </center>
+  </div>
 
 </div>
 

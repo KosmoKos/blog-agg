@@ -44,6 +44,8 @@
  	</bean>
  	
  	
+<jpa:repositories base-package="KosmoKos.jba.repository" 
+entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
 			
 
 </beans>
