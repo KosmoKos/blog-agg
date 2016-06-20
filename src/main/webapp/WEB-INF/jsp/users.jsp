@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 
-jsp t<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <table>
   <thead>
