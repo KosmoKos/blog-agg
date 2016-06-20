@@ -17,6 +17,13 @@
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <title><tiles:getAsString name="title"/></title>
 </head>
+
+<body>
+
+<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras" prefix="tilesx" %>
+
+<talesx:useAttribute name=""/>
+
 <div class="container">
 
     <nav class="navbar navbar-default navbar-static-top">
