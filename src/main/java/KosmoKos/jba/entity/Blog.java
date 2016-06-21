@@ -29,8 +29,7 @@ public class Blog {
 	@OneToMany(mappedBy="blog")
 	private List<Item> items;
 		
-	
-	
+
 	public List<Item> getItems() {
 		return items;
 	}
@@ -63,7 +62,5 @@ public class Blog {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
-	
-	
+
 }
