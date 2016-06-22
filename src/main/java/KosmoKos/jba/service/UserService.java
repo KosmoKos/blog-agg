@@ -20,8 +20,8 @@ public class UserService {
 	}
 
 
-	public Object findOne(int id) {
-		// TODO Auto-generated method stub
+	public User findOne(int id) {
+		
 		return userRepository.findOne(id);
 	}
 }
