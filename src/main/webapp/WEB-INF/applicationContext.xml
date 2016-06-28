@@ -20,6 +20,7 @@
  
  <jdbc:embedded-database type="HSQL" id="dataSource"/>
  
+ <tx:annotation-driven transaction-manager="transactionManager"/>
  
  <bean 
  class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="emf">
@@ -37,7 +38,7 @@
  	
  </bean>
  
- 	<tx:annotation-driven transaction-manager="transactionManager"/>
+ 	
  	
  	<bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
  		<property name="dataSource" ref="dataSource"/>

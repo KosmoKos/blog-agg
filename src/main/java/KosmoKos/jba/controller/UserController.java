@@ -10,19 +10,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import KosmoKos.jba.service.UserService;
 
 @Controller
+@RequestMapping("/users")
 public class UserController {
 
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping("/users")
+	@RequestMapping
 	public String users(Model model){
 		model.addAttribute("users", userService.findAll());
 		return "users";
 		
 	}
 	
-	@RequestMapping("/users/{id}")
+	@RequestMapping("/{id}")
 	public String detail(Model model, @PathVariable int id){
 		model.addAttribute("user", userService.findOne(id));
 		return "user-detail";
