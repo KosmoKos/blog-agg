@@ -14,13 +14,13 @@ import KosmoKos.jba.repository.BlogRepository;
 import KosmoKos.jba.repository.ItemRepository;
 import KosmoKos.jba.repository.UserRepository;
 
-@Transactional
 @Service
+@Transactional
 public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@Autowired
 	private BlogRepository blogRepository;
 	
