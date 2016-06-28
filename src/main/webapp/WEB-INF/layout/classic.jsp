@@ -54,9 +54,9 @@
 
 	<br>
 	<br>
-	<center>
+	<div style="text-align: center;">
 		<tiles:insertAttribute name="footer" />
-	</center>
+	</div>
 
 </div>
 
