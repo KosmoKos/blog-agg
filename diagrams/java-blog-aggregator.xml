@@ -13,9 +13,9 @@
 	<entity>
 		<entity-name>KosmoKos.jba.entity.Item</entity-name>
 		<entity-width>120</entity-width>
-		<entity-height>188</entity-height>
-		<entity-X-Coordinate>470</entity-X-Coordinate>
-		<entity-Y-Coordinate>287</entity-Y-Coordinate>
+		<entity-height>206</entity-height>
+		<entity-X-Coordinate>690</entity-X-Coordinate>
+		<entity-Y-Coordinate>44</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
@@ -36,8 +36,8 @@
 		<entity-name>KosmoKos.jba.entity.Role</entity-name>
 		<entity-width>120</entity-width>
 		<entity-height>146</entity-height>
-		<entity-X-Coordinate>80</entity-X-Coordinate>
-		<entity-Y-Coordinate>271</entity-Y-Coordinate>
+		<entity-X-Coordinate>50</entity-X-Coordinate>
+		<entity-Y-Coordinate>55</entity-Y-Coordinate>
 		<primary-collapsed>false</primary-collapsed>
 		<relation-collapsed>false</relation-collapsed>
 		<basic-collapsed>false</basic-collapsed>
