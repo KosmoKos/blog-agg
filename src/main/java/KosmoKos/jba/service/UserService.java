@@ -2,6 +2,7 @@ package KosmoKos.jba.service;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +14,7 @@ import KosmoKos.jba.repository.BlogRepository;
 import KosmoKos.jba.repository.ItemRepository;
 import KosmoKos.jba.repository.UserRepository;
 
+@Transactional
 @Service
 public class UserService {
 
@@ -39,8 +41,7 @@ public class UserService {
 	public User findOneWithBlogs(int id) {
 		User user = findOne(id);
 		List<Blog> blogs = blogRepository.findByUser(user);
-		
-		for(Blog blog : blogs){
+		for (Blog blog : blogs) {
 			List<Item> items = itemRepository.findByBlog(blog);
 			blog.setItems(items);
 		}
