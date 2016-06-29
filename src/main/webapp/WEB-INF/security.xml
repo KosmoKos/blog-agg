@@ -9,10 +9,11 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 	
 	
 	<http>
+	<csrf disabled="true"/>
 <intercept-url pattern="/users**" access="hasRole('ADMIN')" />
 <intercept-url pattern="/users/**" access="hasRole('ADMIN')" />
-<csrf disabled="true"/>
-<form-login />
+<form-login  login-page="/login.html"/>
+
 <logout />
 
 </http>
