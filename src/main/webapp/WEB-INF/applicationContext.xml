@@ -20,6 +20,14 @@
  
  <jdbc:embedded-database type="HSQL" id="dataSource"/>
  
+ <bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/jba" />
+		<property name="username" value="root" />
+		<property name="password" value="06131065" />
+	</bean>
+ 
  <tx:annotation-driven transaction-manager="transactionManager"/>
  
  <bean 
