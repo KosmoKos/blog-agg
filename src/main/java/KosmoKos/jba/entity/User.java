@@ -21,14 +21,15 @@ public class User {
 	private String email;
 
 	private String password;
-
-	@OneToMany(mappedBy = "user")
-	private List<Blog> blogs;
-
+	
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
+	
+	@OneToMany(mappedBy = "user")
+	private List<Blog> blogs;
 
+	
 	public List<Blog> getBlogs() {
 		return blogs;
 	}

@@ -29,6 +29,8 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 								where user.name = ?" 
 	users-by-username-query="select name,password,1 from user where name = ?"/>
 	
+	
+	
 <!-- 	<user-service> -->
 <!-- 	<user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" /> -->
 	
