@@ -17,16 +17,15 @@
 		<context:exclude-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
+	
+<jpa:repositories base-package="KosmoKos.jba.repository"
+					  entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
+ 				
+	
+	
  
  <jdbc:embedded-database type="HSQL" id="dataSource"/>
- 
- <bean id="dataSource"
-		class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/jba" />
-		<property name="username" value="root" />
-		<property name="password" value="06131065" />
-	</bean>
+   
  
  <tx:annotation-driven transaction-manager="transactionManager"/>
  
@@ -45,16 +44,15 @@
  	<bean class="org.hibernate.jpa.HibernatePersistenceProvider"/>
  	</property>
  	
- </bean>
+ </bean> 
   	
  	
  	<bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
  		<property name="dataSource" ref="dataSource"/>
+ 		
  	</bean>
 
-	<jpa:repositories base-package="KosmoKos.jba.repository"
-					  entity-manager-factory-ref="emf" transaction-manager-ref="transactionManager"/>
- 				
 	
- <import resource="security.xml" />
+	<import resource="security.xml" />
+ 
 </beans>
