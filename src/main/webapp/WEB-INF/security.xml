@@ -32,10 +32,10 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 	
 	
 	
-	<user-service>
-	<user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" />
+<!-- 	<user-service> -->
+<!-- 	<user name="admin" password="admin" authorities="ROLE_USER, ROLE_ADMIN" /> -->
 	
-	</user-service>
+<!-- 	</user-service> -->
 </authentication-provider>
 </authentication-manager>
 	
