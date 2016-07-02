@@ -44,8 +44,7 @@
  	<bean class="org.hibernate.jpa.HibernatePersistenceProvider"/>
  	</property>
  	
- </bean> 
-  	
+ </bean>   	
  	
  	<bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
  		<property name="dataSource" ref="dataSource"/>
