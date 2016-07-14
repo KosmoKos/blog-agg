@@ -3,11 +3,13 @@ package KosmoKos.jba.service;
 import java.util.List;
 
 
+import org.springframework.transaction.annotation.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
+
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import KosmoKos.jba.entity.Blog;
 import KosmoKos.jba.entity.Item;
@@ -15,6 +17,7 @@ import KosmoKos.jba.entity.User;
 import KosmoKos.jba.repository.BlogRepository;
 import KosmoKos.jba.repository.ItemRepository;
 import KosmoKos.jba.repository.UserRepository;
+
 
 @Service
 @Transactional
