@@ -22,6 +22,9 @@ public class User {
 
 	private String password;
 	
+	private boolean enabled;
+	
+
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
@@ -76,6 +79,15 @@ public class User {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
 }

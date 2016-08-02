@@ -56,8 +56,7 @@
 					<security:authorize access="isAuthenticated()">
 					<li><a href="<spring:url value="/logout"/>"> Logout</a></li>
 					</security:authorize>					
-					
-					
+									
 					
                 </ul>
                 

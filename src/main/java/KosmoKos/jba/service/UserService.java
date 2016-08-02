@@ -1,21 +1,22 @@
 package KosmoKos.jba.service;
 
+import java.util.ArrayList;
 import java.util.List;
-
-
-import org.springframework.transaction.annotation.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
-
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import KosmoKos.jba.entity.Blog;
 import KosmoKos.jba.entity.Item;
+import KosmoKos.jba.entity.Role;
 import KosmoKos.jba.entity.User;
 import KosmoKos.jba.repository.BlogRepository;
 import KosmoKos.jba.repository.ItemRepository;
+import KosmoKos.jba.repository.RoleRepository;
 import KosmoKos.jba.repository.UserRepository;
 
 
@@ -25,6 +26,9 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private RoleRepository roleRepository;
 
 	@Autowired
 	private BlogRepository blogRepository;
@@ -56,7 +60,17 @@ public class UserService {
 
 
 	public void save(User user) {
+		user.setEnabled(true);
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		user.setPassword(encoder.encode(user.getPassword()));
 		userRepository.save(user);
+		
+		List<Role> roles = new ArrayList<Role>();
+		roles.add(roleRepository.findByName("ROLE_USER"));
+		user.setRoles(roles);
+		
+		userRepository.save(user);
+		
 		
 	}
 
