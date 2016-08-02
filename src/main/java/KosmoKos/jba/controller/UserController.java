@@ -22,7 +22,8 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@Autowired BlogService blogService;
+	@Autowired
+	private BlogService blogService;
 	
 	@ModelAttribute("user")
 	public User construct(){		

@@ -10,19 +10,19 @@ import KosmoKos.jba.repository.UserRepository;
 
 @Service
 public class BlogService {
-	
-	@Autowired
-	private BlogRepository blogRepository;
-	
-	@Autowired 
-	private UserRepository userRepository;
 
+		@Autowired
+		private BlogRepository blogRepository;
+		
+		@Autowired
+		private UserRepository userRepository;
+		
 	public void save(Blog blog, String name) {
-		User user = userRepository.findByName(name);
+		User user =  userRepository.findByName(name);
 		blog.setUser(user);
 		blogRepository.save(blog);
-		
+						
 	}
-
 	
 }
+

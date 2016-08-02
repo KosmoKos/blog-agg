@@ -11,7 +11,7 @@
 </button>
 
 
-<form:form commandName="Blog" cssClass="form-horizontal">
+<form:form commandName="blog" cssClass="form-horizontal">
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
