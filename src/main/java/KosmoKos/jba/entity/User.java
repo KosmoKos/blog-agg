@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
 
 @Entity
 public class User {
@@ -17,6 +18,7 @@ public class User {
 	@GeneratedValue
 	private Integer id;
 
+	
 	private String name;
 
 	private String email;
