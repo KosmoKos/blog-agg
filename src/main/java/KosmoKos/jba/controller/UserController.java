@@ -28,8 +28,7 @@ public class UserController {
 	@Autowired
 	private BlogService blogService;
 	
-	
-		
+			
 	@ModelAttribute("blog")
 	public Blog constructBlog(){		
 		return new Blog();
@@ -57,10 +56,7 @@ public class UserController {
 		Blog blog = blogService.findOne(id);
 		blogService.delete(blog);
 		return "redirect:/account.html";
-	}
-	
-	
-	
+	}	
 	
 }
 
