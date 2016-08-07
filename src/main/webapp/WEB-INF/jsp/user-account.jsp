@@ -61,7 +61,6 @@ $(document).ready(function(){
 		$("#modalRemove").modal();
 	});
 	$(".blogForm").validate(
-			$(".registrationForm").validate(
 					{
 						rules:{
 							name:{
