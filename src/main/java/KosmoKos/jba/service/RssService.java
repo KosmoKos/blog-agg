@@ -30,8 +30,7 @@ public class RssService {
 	public List<Item> getItems(File file) throws RssEcxeption{
 		return getItems(new StreamSource(file));
 		
-	}
-	
+	}	
 
 	public List<Item> getItems(String url) throws RssEcxeption{
 		return getItems(new StreamSource(url));

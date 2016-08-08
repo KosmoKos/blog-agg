@@ -24,6 +24,12 @@ public class BlogService {
 	@Autowired
 	private ItemRepository itemRepository;
 	
+	@Autowired
+	private BlogRepository blogRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
 	public void saveItems(Blog blog){
 		try {
 			List<Item> items = rssService.getItems(blog.getUrl());
@@ -38,11 +44,7 @@ public class BlogService {
 			e.printStackTrace();
 		}
 	}
-		@Autowired
-		private BlogRepository blogRepository;
 		
-		@Autowired
-		private UserRepository userRepository;
 		
 	public void save(Blog blog, String name) {
 		User user =  userRepository.findByName(name);
