@@ -1,7 +1,7 @@
 package KosmoKos.jba.service;
 
 import java.util.ArrayList;
-//import java.util.Date;
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -81,7 +81,4 @@ public class InitDbService {
 		}
 	}
 	
-	
-	
-
 }
