@@ -1,7 +1,7 @@
 package KosmoKos.jba.service;
 
 import java.util.ArrayList;
-import java.util.Date;
+//import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import KosmoKos.jba.entity.Blog;
-import KosmoKos.jba.entity.Item;
+//import KosmoKos.jba.entity.Item;
 import KosmoKos.jba.entity.Role;
 import KosmoKos.jba.entity.User;
 import KosmoKos.jba.repository.BlogRepository;
@@ -38,6 +38,7 @@ public class InitDbService {
 	
 	@PostConstruct
 	public void init(){
+		if(roleRepository.findByName("ROLE_ADMIN") == null){
 		Role roleUser = new Role();
 		roleUser.setName("ROLE_USER");
 		roleRepository.save(roleUser);
@@ -77,7 +78,7 @@ public class InitDbService {
 //		item2.setPublishedDate(new Date());
 //		itemRepository.save(item2);
 		
-		
+		}
 	}
 	
 	
